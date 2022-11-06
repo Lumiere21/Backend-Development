@@ -40,7 +40,7 @@ section {
     padding: 2rem;
 }
 .bg-image {
-    background: url(/imgs/hospital.png);
+    background: url("/img/hospital.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,4 +112,10 @@ section {
 }
 .login .login-field .input-field p {
     font-size: 1.3rem;
+}
+.login .login-field .invalid-feedback {
+    color: var(--lightred);
+    margin: 1rem 0;
+    padding-left: .5rem;
+    
 }

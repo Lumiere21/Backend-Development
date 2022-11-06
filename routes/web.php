@@ -50,3 +50,6 @@ Route::group(['middleware' => ['auth']], function() {
     */
     Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 });
+Route::get('/sample',  function() {
+    return view('sample');
+});

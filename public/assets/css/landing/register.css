@@ -1,0 +1,141 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    /* preset colors */
+    --darkred: #591515;
+    --lightred: #F22E2E;
+    --greyred: #8C6C61;
+    --black:#08080D;
+    --white:#fff;
+    --gray: #D9D9D9;
+    --light-color:#666;
+    --light-bg:#eee;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   /* text-transform: capitalize; */
+}
+
+html {
+    font-size: 62.5%;  /**10px*/
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+section {
+    padding: 4rem;
+    height: 100vh;
+    width: 100%;
+    background: url("/img/signupbg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav span {
+    height: 4.5rem; width: 4.5rem;
+    background-color: var(--light-color);
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    cursor: pointer;
+    background-color: var(--white);
+    width: 5rem;
+    padding: .5rem;
+    text-align: center;
+    border-radius: 3rem;
+}
+section .signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .signup-container .signup-form {
+    background-color: var(--white);
+    width: 60%;
+    height: 55rem;
+    border-radius: 3rem;
+    box-shadow: var(--box-shadow);
+    padding: 5rem 6rem;
+}
+.signup-form h1 {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+}
+.signup-form h1 span {
+    color: var(--lightred);
+}
+.input-fields input {
+    border: 1px solid var(--light-color);
+    width: 30%;
+    height: 4rem;
+    padding: 0 2rem;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+    transition: all .3s ease-in-out;
+    background: #f4f4f4;
+}
+.input-fields input:focus {
+    border: 2px solid var(--lightred);
+}
+
+.input-fields .invalid-feedback {
+    color: var(--lightred);
+    margin: 1rem 0;
+    padding-left: .5rem;
+    
+}
+
+
+.row1, .row2, .row3, .row4{
+    display:flex;
+}
+.row1, .row3, .row4 {
+    justify-content:space-between;
+}
+.row2 input {
+    width: 100%;
+}
+.row3 input{
+    width: 48%;
+}
+.row4 input{
+    width: 48%;
+}
+.submission {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0; 
+}
+.submission button {
+    width: 50%; height: 5rem;
+    border-radius: .5rem;
+    align-self: center;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    background-color: var(--lightred);
+    color: var(--white);
+}
+.submission p {
+    font-size: 1.2rem;
+}
+.submission a {
+    color: var(--lightred);
+    text-decoration: underline;
+}

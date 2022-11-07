@@ -36,25 +36,21 @@ class LoginController extends Controller
      */
     public function authenticated(){
         if(Auth::user()->role == '1'){ // 1 = admin
-            return redirect('superAdmin/dashboard')->with('status', 'Welcome to Super Admin Dashboard');
-        }
-        else if(Auth::user()->role == '2')//2 = organizations
-        {
             return redirect('admin/dashboard')->with('status', 'Welcome to Admin Dashboard');
         }
-        else if(Auth::user()->role == '3')//3 = key actors
+        else if(Auth::user()->role == '2')//2 = key actors
         {
             return redirect('keyActor/dashboard')->with('status', 'Welcome to Key Actor Dashboard');
         }
         else if(Auth::user()->role == '0')//0 = normal users
         {
-            return redirect('/home')->with('status', 'You have logged in successfully!');
+            return redirect('profile')->with('status', 'You have logged in successfully!');
         }
         else{
             return redirect('/');
         }
-    }
-    /*if(Auth::user()->role == '1'){ // 1 = admin
+    }/*
+    if(Auth::user()->role == '1'){ // 1 = admin
             return redirect('superAdmin/dashboard')->with('status', 'Welcome to Super Admin Dashboard');
         }
         else if(Auth::user()->role == '2')//2 = organizations

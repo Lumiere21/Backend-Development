@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('target_user', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->digits('emergencyNumber1');
+            $table->digits('emergencyNumber2');
         });
     }
 
@@ -26,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('target_user');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('emergencyNumber1');
+            $table->dropColumn('emergencyNumber2');
+        });
     }
 };

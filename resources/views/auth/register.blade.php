@@ -38,14 +38,42 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
                         <div class="row mb-3">
                             <label for="phoneNumber" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phoneNumber" type="text" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" required autocomplete="phoneNumber" autofocus>
+                                <input id="phoneNumber" type="tel" class="form-control @error('phoneNumber') is-invalid @enderror" name="phoneNumber" value="{{ old('phoneNumber') }}" required autocomplete="phoneNumber" autofocus>
 
                                 @error('phoneNumber')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="emergencyNumber1" class="col-md-4 col-form-label text-md-end">{{ __('Emergency Contact 1') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="emergencyNumber1" type="tel" class="form-control @error('emergencyNumber1') is-invalid @enderror" name="emergencyNumber1" value="{{ old('emergencyNumber1') }}" required autocomplete="emergencyNumber1" autofocus>
+
+                                @error('emergencyNumber1')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="emergencyNumber2" class="col-md-4 col-form-label text-md-end">{{ __('Emergency Contact 2') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="emergencyNumber2" type="tel" class="form-control @error('emergencyNumber2') is-invalid @enderror" name="emergencyNumber2" value="{{ old('emergencyNumber2') }}" required autocomplete="emergencyNumber2" autofocus>
+
+                                @error('emergencyNumber2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -71,7 +99,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@gmail.com">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -85,7 +113,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="minimum of 8">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

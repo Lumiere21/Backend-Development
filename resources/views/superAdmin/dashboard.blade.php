@@ -16,8 +16,11 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in!') }}  
+
+                
                 </div>
+                <a href="{{ url('superAdmin/users') }}">Manage Users</a>
             </div>
         </div>
     </div>

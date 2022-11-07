@@ -16,6 +16,9 @@
 
                     {{ __('Welcome!') }}
                     You're logged in {{ Auth::user()->firstName }}
+                    <div>
+                        <a href="{{ url('profile/users/profile') }}">Edit Profile</a>
+                    </div>
                     
                 </div>
             </div>

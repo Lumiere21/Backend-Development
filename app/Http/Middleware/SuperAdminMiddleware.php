@@ -17,6 +17,7 @@ class SuperAdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        return $next($request);
         if(Auth::check()){
             if(Auth::user()->role == '1'){ //1 = Super Admin, 2 = admin, 3 = key actors, 0 = normal user
                 return $next($request);
